@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package xebia;
+
+option java_package = "com.xebia.protobuf.proto";
+option java_outer_classname = "GpsLocationProtos";
+
+message GpsLocation {
+    sint32 latitude = 1;
+    sint32 longitude = 2;
+}

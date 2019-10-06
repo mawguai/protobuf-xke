@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package xebia;
+
+option java_package = "com.xebia.protobuf.proto";
+option java_outer_classname = "SensorDataProtos";
+
+message SensorData {
+    SensorType sensorType = 1;
+    sint32 value = 2;
+    string additionalInfos = 3;
+
+    enum SensorType {
+        HUMIDITY = 0;
+        TEMPERATURE = 1;
+        COMPACTION  = 2;
+        SALINITY = 3;
+    }
+}

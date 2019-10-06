@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package xebia;
+
+import "GpsLocation.proto";
+import "SensorData.proto";
+
+option java_package = "com.xebia.protobuf.proto";
+option java_outer_classname = "GroundDataProtos";
+
+message GroundData {
+    int32 id = 1;
+    int32 timestamp = 2; // time in second since 1st january 1970
+    GpsLocation gpsLocation = 3;
+    repeated SensorData sensorDatas = 4;
+}
